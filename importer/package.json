@@ -1,0 +1,9 @@
+{
+  "name": "voice-trunk-importer",
+  "version": "0.1.0",
+  "type": "module",
+  "bin": { "voice-trunk-import": "./src/index.ts" },
+  "scripts": { "start": "bun run src/index.ts", "watch": "bun run src/index.ts watch" },
+  "devDependencies": { "@types/bun": "latest" },
+  "peerDependencies": { "typescript": "^5.0.0" }
+}

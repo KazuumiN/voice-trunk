@@ -1,0 +1,64 @@
+name = "voice-trunk"
+main = "worker-entry.ts"
+compatibility_date = "2025-02-14"
+compatibility_flags = ["nodejs_compat"]
+
+# D1 Database
+[[d1_databases]]
+binding = "DB"
+database_name = "voice-trunk-db"
+database_id = "f2371c3d-3b7c-47f0-9ddf-0016ff88d0ee"
+migrations_dir = "migrations"
+
+# R2 Buckets
+[[r2_buckets]]
+binding = "R2_RAW_AUDIO"
+bucket_name = "r2-raw-audio"
+
+[[r2_buckets]]
+binding = "R2_ARTIFACTS"
+bucket_name = "r2-artifacts"
+
+# Queue (receives R2 event notifications)
+[[queues.consumers]]
+queue = "recording-upload-queue"
+max_batch_size = 10
+max_batch_timeout = 5
+
+[[queues.producers]]
+binding = "UPLOAD_QUEUE"
+queue = "recording-upload-queue"
+
+# Workflow
+[[workflows]]
+binding = "RECORDING_PIPELINE"
+name = "recording-pipeline-workflow"
+class_name = "RecordingPipelineWorkflow"
+
+# Environment variables (non-secret)
+[vars]
+ENVIRONMENT = "production"
+DEFAULT_GEMINI_MODEL = "gemini-2.5-flash"
+GEMINI_MAX_CONCURRENT = "5"
+CF_ACCESS_TEAM_DOMAIN = ""
+CF_ACCESS_AUD = ""
+
+# Assets (SvelteKit static)
+[assets]
+directory = ".svelte-kit/cloudflare"
+
+# Observability
+[observability]
+enabled = false
+head_sampling_rate = 1
+
+[observability.logs]
+enabled = true
+head_sampling_rate = 1
+persist = true
+invocation_logs = true
+
+[observability.traces]
+enabled = true
+persist = true
+head_sampling_rate = 1

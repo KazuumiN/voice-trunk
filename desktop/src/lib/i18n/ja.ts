@@ -1,0 +1,101 @@
+import type { TranslationKey } from "./en";
+
+export const ja: Record<TranslationKey, string> = {
+  // Nav
+  nav_status: "ステータス",
+  nav_upload: "アップロード",
+  nav_batches: "バッチ",
+  nav_settings: "設定",
+  connected: "接続済み",
+  disconnected: "未接続",
+
+  // Status page
+  status_title: "ステータス",
+  ffmpeg_not_found: "ffmpeg が検出されませんでした",
+  ffmpeg_not_found_detail: "音声変換を行うにはffmpegが必要です。設定ページでパスを指定してください。",
+  importing: "インポート中",
+  files_count: "ファイル",
+  connected_devices: "接続デバイス",
+  no_devices: "デバイスが接続されていません",
+  no_devices_hint: "ICレコーダーをUSBで接続してください",
+  recent_batches: "最近のバッチ",
+  show_all: "すべて表示",
+
+  // Upload page
+  upload_title: "アップロード",
+  audio_files: "音声ファイル",
+  upload_description: "音声ファイルをここにドラッグ＆ドロップ、または",
+  supported_formats: "対応形式: .wma, .mp3, .wav, .m4a, .ogg, .flac, .mp4",
+  drop_here: "ここにドロップ",
+  select_files: "ファイルを選択",
+  files_selected: "件のファイル",
+  clear: "クリア",
+  processing: "処理中...",
+  start_upload: "アップロード開始",
+  hashing: "ハッシュ計算中",
+  done: "完了",
+  error: "エラー",
+  pending: "待機中",
+  remove: "削除",
+  upload_complete: "アップロードが完了しました。",
+  view_batches: "バッチ一覧を確認",
+  hash_failed: "ハッシュ計算に失敗しました",
+  upload_failed: "アップロードに失敗しました",
+
+  // Settings page
+  settings_title: "設定",
+  server_connection: "サーバー接続",
+  server_url: "サーバーURL",
+  testing: "テスト中...",
+  test_connection: "接続テスト",
+  connection_success: "接続成功",
+  connection_failed: "接続失敗",
+  ffmpeg_path: "ffmpeg パス",
+  detecting: "検出中...",
+  auto_detect: "自動検出",
+  ffmpeg_found: "ffmpegが見つかりました",
+  ffmpeg_not_found_short: "ffmpegが見つかりません",
+  behavior: "動作設定",
+  storage_limit: "ストレージ上限（GB）",
+  auto_import: "自動インポート",
+  auto_import_desc: "デバイス接続時に自動でインポートを開始",
+  auto_start: "ログイン時に起動",
+  auto_start_desc: "システム起動時にアプリを自動起動",
+  saving: "保存中...",
+  save: "保存",
+  saved: "保存しました",
+  language: "言語",
+  lang_en: "English",
+  lang_ja: "日本語",
+
+  // Batches page
+  batches_title: "バッチ",
+  cleaning: "クリーン中...",
+  clean: "クリーン",
+  refresh: "更新",
+  loading: "読み込み中...",
+  no_batches: "バッチがありません",
+  device: "デバイス",
+
+  // DeviceCard
+  import_failed: "インポートに失敗しました",
+  id_file_found: "識別ファイル検出済み（未登録デバイス）",
+  no_id_file: "識別ファイルなし",
+  starting: "開始中...",
+  import_btn: "インポート",
+
+  // FileList
+  uploading: "アップロード中",
+  no_files: "ファイルなし",
+
+  // ImportLog phases
+  phase_scanning: "ファイルスキャン中",
+  phase_copying: "コピー中",
+  phase_converting: "変換中",
+  phase_hashing: "ハッシュ計算中",
+  phase_preflight: "プリフライト確認中",
+  phase_uploading: "アップロード中",
+  phase_completing: "完了処理中",
+  phase_done: "完了",
+  phase_error: "エラー",
+};

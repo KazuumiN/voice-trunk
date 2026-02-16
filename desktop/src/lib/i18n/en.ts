@@ -1,0 +1,101 @@
+export const en = {
+  // Nav
+  nav_status: "Status",
+  nav_upload: "Upload",
+  nav_batches: "Batches",
+  nav_settings: "Settings",
+  connected: "Connected",
+  disconnected: "Disconnected",
+
+  // Status page
+  status_title: "Status",
+  ffmpeg_not_found: "ffmpeg was not detected",
+  ffmpeg_not_found_detail: "ffmpeg is required for audio conversion. Please specify the path in settings.",
+  importing: "Importing",
+  files_count: "files",
+  connected_devices: "Connected Devices",
+  no_devices: "No devices connected",
+  no_devices_hint: "Connect an IC recorder via USB",
+  recent_batches: "Recent Batches",
+  show_all: "Show All",
+
+  // Upload page
+  upload_title: "Upload",
+  audio_files: "Audio Files",
+  upload_description: "Drag & drop audio files here, or",
+  supported_formats: "Supported: .wma, .mp3, .wav, .m4a, .ogg, .flac, .mp4",
+  drop_here: "Drop files here",
+  select_files: "Select Files",
+  files_selected: "files",
+  clear: "Clear",
+  processing: "Processing...",
+  start_upload: "Start Upload",
+  hashing: "Hashing...",
+  done: "Done",
+  error: "Error",
+  pending: "Pending",
+  remove: "Remove",
+  upload_complete: "Upload completed.",
+  view_batches: "View Batches",
+  hash_failed: "Hash calculation failed",
+  upload_failed: "Upload failed",
+
+  // Settings page
+  settings_title: "Settings",
+  server_connection: "Server Connection",
+  server_url: "Server URL",
+  testing: "Testing...",
+  test_connection: "Test Connection",
+  connection_success: "Connection successful",
+  connection_failed: "Connection failed",
+  ffmpeg_path: "ffmpeg Path",
+  detecting: "Detecting...",
+  auto_detect: "Auto-detect",
+  ffmpeg_found: "ffmpeg found",
+  ffmpeg_not_found_short: "ffmpeg not found",
+  behavior: "Behavior",
+  storage_limit: "Storage Limit (GB)",
+  auto_import: "Auto Import",
+  auto_import_desc: "Automatically start import when device is connected",
+  auto_start: "Start at Login",
+  auto_start_desc: "Automatically start app on system boot",
+  saving: "Saving...",
+  save: "Save",
+  saved: "Saved",
+  language: "Language",
+  lang_en: "English",
+  lang_ja: "Japanese",
+
+  // Batches page
+  batches_title: "Batches",
+  cleaning: "Cleaning...",
+  clean: "Clean",
+  refresh: "Refresh",
+  loading: "Loading...",
+  no_batches: "No batches",
+  device: "Device",
+
+  // DeviceCard
+  import_failed: "Import failed",
+  id_file_found: "ID file found (unregistered device)",
+  no_id_file: "No ID file",
+  starting: "Starting...",
+  import_btn: "Import",
+
+  // FileList
+  uploading: "Uploading",
+  no_files: "No files",
+
+  // ImportLog phases
+  phase_scanning: "Scanning files",
+  phase_copying: "Copying",
+  phase_converting: "Converting",
+  phase_hashing: "Hashing",
+  phase_preflight: "Preflight check",
+  phase_uploading: "Uploading",
+  phase_completing: "Completing",
+  phase_done: "Done",
+  phase_error: "Error",
+} as const;
+
+export type TranslationKey = keyof typeof en;

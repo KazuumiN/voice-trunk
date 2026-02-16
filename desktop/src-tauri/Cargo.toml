@@ -1,0 +1,37 @@
+[package]
+name = "voice-trunk-desktop"
+version = "0.1.0"
+edition = "2021"
+license = "AGPL-3.0-or-later"
+
+[lib]
+name = "voice_trunk_desktop_lib"
+crate-type = ["lib", "cdylib", "staticlib"]
+
+[[bin]]
+name = "voice-trunk-desktop"
+path = "src/main.rs"
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = ["tray-icon"] }
+tauri-plugin-dialog = "2"
+tauri-plugin-notification = "2"
+tauri-plugin-shell = "2"
+tauri-plugin-store = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tokio = { version = "1", features = ["full"] }
+reqwest = { version = "0.12", features = ["json", "stream"] }
+sha2 = "0.10"
+notify = { version = "7", features = ["macos_fsevent"] }
+walkdir = "2"
+chrono = { version = "0.4", features = ["serde"] }
+uuid = { version = "1", features = ["v4"] }
+dirs = "6"
+thiserror = "2"
+log = "0.4"
+env_logger = "0.11"
+futures = "0.3"
