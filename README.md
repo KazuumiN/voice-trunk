@@ -3,6 +3,8 @@
 > [!CAUTION]
 > This project is currently incomplete and not fully operational.
 
+![voicetruck-hero](https://github.com/user-attachments/assets/78ab7685-c17d-4fd0-b7c9-d42b0c77b893)
+
 A system for ingesting workshop voice recordings from USB recorders, automatically uploading them to the cloud, and processing them through an AI pipeline (transcription, summarization, claim extraction). Designed for civic workshop recording management.
 
 [Japanese / 日本語](./README-ja.md)
